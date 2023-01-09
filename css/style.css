@@ -1173,21 +1173,72 @@ a.brand:focus {
 .portfolio_nav {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
-    padding: 0 200px;
+    align-items: center;
+    position: relative;
+    padding: 20px 0;
+}
+
+.portfolio_nav .nav-item {
+    padding: 20px 0;
+    width: 100%;
 }
 
 .portfolio_item {
     background-color: var(--ruby);
     color: #fff;
     outline: none;
-    padding: 6px 12px;
+    padding: 14px 12px;
     font-family: var(--heading-font);
     font-size: 16px;
     font-weight: 600;
     border: none;
     border-radius: 4px;
     text-decoration: none;
+    position: relative;
+}
+
+.portfolio_nav .line {
+    width: 40%;
+    background-color: #fff;
+    height: 10px;
+    position: absolute;
+    z-index: -1;
+    margin: auto 0;
+    left: 300px;
+    transform: translateY(10px);
+}
+
+.portfolio-content a {
+    font-style: var(--heading-font-1);
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.portfolio-content img {
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.portfolio-content img:hover {
+    transform: scale(1.04);
+}
+
+.portfolio-content {
+    position: relative;
+}
+
+.portfolio-content p {
+    font-size: 10px;
+}
+
+.portfolio-content .content {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 @media (min-width: 992px) {
