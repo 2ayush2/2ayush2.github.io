@@ -112,3 +112,10 @@
     });
   }
 })(jQuery);
+var mixir = mixitup(".portfolio");
+var typed = new Typed(".auto-type", {
+  strings: ["WEB DEVELOPER", "UI UX DESIGNER", "GRAPHIC DESIGNER"],
+  typeSpeed: 150,
+  backSpeed: 150,
+  loop: true,
+});
