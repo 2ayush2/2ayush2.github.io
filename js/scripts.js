@@ -119,3 +119,42 @@ var typed = new Typed(".auto-type", {
   backSpeed: 150,
   loop: true,
 });
+
+const $jq = jQuery.noConflict();
+
+$jq(document).ready(function () {
+  $jq("#slick1").slick({
+    rows: 1,
+    dots: false,
+
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+
+    autoplay: true,
+    autoplaySpeed: 100000,
+    dots: true,
+    prevArrow:
+      '<button class="	fa fa-arrow-left slider-arrow arrow-left"></button>',
+    nextArrow:
+      '<button class="	fa fa-arrow-right slider-arrow arrow-right"></button>',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          rows: 1,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+});
