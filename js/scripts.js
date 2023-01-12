@@ -158,3 +158,22 @@ $jq(document).ready(function () {
     ],
   });
 });
+
+jQuery(document).ready(function ($) {
+  if (
+    !$("#myCanvas").tagcanvas(
+      {
+        textColour: "#29d882",
+        outlineColour: "transparent",
+        reverse: true,
+        depth: 0.8,
+        maxSpeed: 0.05,
+      },
+      "tags"
+    )
+  ) {
+    // something went wrong, hide the canvas container
+    $("#myCanvasContainer").hide();
+  }
+  // your other jQuery stuff here...
+});
