@@ -177,3 +177,16 @@ jQuery(document).ready(function ($) {
   }
   // your other jQuery stuff here...
 });
+
+var bounceElement = document.querySelectorAll(".big");
+bounceElement.forEach((span) => {
+  span.addEventListener("mouseover", function () {
+    this.classList.add("bounce");
+    setTimeout(
+      function () {
+        this.classList.remove("bounce");
+      }.bind(this),
+      1000
+    );
+  });
+});
